@@ -21,8 +21,14 @@ body{
 }
 .container{
   margin: 0 auto;
-  padding: 0 $container-offset;
-  max-width: calc($container-width + ($container-offset * 2));
+  padding: 0 $container-offset-large;
+  max-width: calc($container-width + ($container-offset-large * 2));
+}
+@media (max-width: 767.98px) {
+  .container{
+    padding: 0 $container-offset-medium;
+    max-width: calc($container-width + ($container-offset-medium * 2));
+  }
 }
 .list-reset{
   margin: 0;
