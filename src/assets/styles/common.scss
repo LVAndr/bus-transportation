@@ -13,10 +13,11 @@ html, body{
 }
 body{
   font-family: 'Poppins', 'Arial', sans-serif;
+  font-weight: 400;
+  background: $background-color-light;
 }
 #app{
   height: 100%;
-  background: #fff;
 }
 .container{
   margin: 0 auto;
@@ -37,6 +38,20 @@ body{
 }
 a{
   text-decoration: none;
+  color: inherit;
+}
+.link{
+  font-size: $link-size;
+  transition: opacity .3s;
+}
+.link:hover{
+  opacity: $link-hover;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+h1,h2, h3, h4{
+  font-size: $title-font-size;
 }
 .wrapper{
   display: flex;

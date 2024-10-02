@@ -1,2 +1,18 @@
+$background-color-light: #fff;
+$background-linear-gradient: linear-gradient(225deg, #009eff, #004cbd);
+$background-footer-top: #2e2e2e;
+$background-footer-bottom: #242424;
+
+
+$title-font-size: clamp(1.25rem, 1.786vw + 0.893rem, 2.5rem);
+$text-color-light: #fff;
+$text-color-dark: #2c2c2c;
+$text-size: 18px;
+$link-size: 16px;
+
 $container-width: 1440px;
 $container-offset: 15px;
+
+$header-padding: 20px;
+
+$link-hover: .8;

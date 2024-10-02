@@ -13,13 +13,16 @@ import FooterContainer from "../components/FooterContainer.vue";
 </template>
 
 <style scoped lang="scss">
+@import "src/assets/styles/variables";
 
 .main{
   position: relative;
+  color: $text-color-dark;
 }
 .hero{
+  padding-top: 80px;
   position: absolute;
-  top: -60px;
+  top: -80px;
   left: 0;
   right: 0;
 }

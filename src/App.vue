@@ -9,5 +9,5 @@ import Home from "./views/Home.vue";
 </template>
 
 <style scoped lang="scss">
-
+@import "src/assets/styles/variables";
 </style>
