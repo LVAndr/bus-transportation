@@ -43,4 +43,18 @@ import TripCard from "./TripCard.vue";
     margin-top: 40px;
   }
 }
+@media (max-width: 991.98px) {
+  .trips{
+    &__cards{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .trips{
+    &__cards{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
 </style>
