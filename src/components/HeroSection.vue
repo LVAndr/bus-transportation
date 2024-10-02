@@ -6,7 +6,7 @@
   <section class="hero">
     <div class="hero__container container">
       <div class="hero__content">
-        <h1 class="hero__title">
+        <h1 class="hero__title title">
           <span class="hero__title-top">Квитки на автобус</span>
           <span class="hero__title-bottom" >маршрути по Україні та Європі в одному місці</span>
         </h1>
@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column;
     &-bottom{
-      font-size: 20px;
+      font-size: $title-bottom-font-size;
     }
   }
 }

@@ -5,13 +5,14 @@ $background-footer-bottom: #242424;
 
 
 $title-font-size: clamp(1.25rem, 1.786vw + 0.893rem, 2.5rem);
+$title-bottom-font-size: clamp(0.875rem, 0.536vw + 0.768rem, 1.25rem);
 $text-color-light: #fff;
 $text-color-dark: #2c2c2c;
-$text-size: 18px;
+$text-size: clamp(0.875rem, 0.357vw + 0.804rem, 1.125rem);
 $link-size: 16px;
 
 $container-width: 1440px;
-$container-offset: 15px;
+$container-offset: 20px;
 
 $header-padding: 20px;
 
