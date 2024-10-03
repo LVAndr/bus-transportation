@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection.vue";
 import HeaderContainer from "../components/HeaderContainer.vue";
 import FooterContainer from "../components/FooterContainer.vue";
 import TripCardsSection from "../components/TripsCardsSection.vue";
+import AnswersQuestionsSection from "../components/AnswersQuestionsSection.vue";
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import TripCardsSection from "../components/TripsCardsSection.vue";
     <main class="main">
       <hero-section/>
       <trip-cards-section/>
+      <answers-questions-section/>
     </main>
     <footer-container/>
 </template>

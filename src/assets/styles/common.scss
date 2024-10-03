@@ -13,6 +13,7 @@ html, body{
 }
 body{
   font-family: 'Poppins', 'Arial', sans-serif;
+  font-size: $text-size;
   font-weight: 400;
   background: $background-color-light;
 }
@@ -58,6 +59,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .title{
   font-size: $title-font-size;
+  letter-spacing: .03em;
 }
 .wrapper{
   position: relative;

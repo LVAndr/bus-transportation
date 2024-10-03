@@ -1,5 +1,5 @@
 <script setup>
-
+const yearNow = new Date().getFullYear();
 </script>
 
 <template>
@@ -11,7 +11,7 @@
   </div>
   <div class="footer__bottom footer-bottom">
     <div class="footer-bottom__container container">
-      <small>"Bus Tickets" &copy 2024</small>
+      <small>Bus Tickets &copy {{yearNow}}</small>
       <small>Сайт розроблено <a href="" lang="en">Vadim Liulko</a></small>
     </div>
   </div>
