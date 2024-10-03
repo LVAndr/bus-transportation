@@ -6,7 +6,7 @@ const yearNow = new Date().getFullYear();
 <footer class="footer">
   <div class="footer__top footer-top">
     <div class="footer-top__container container">
-      Footer
+      <a href="/" class="logo">Bus trans</a>
     </div>
   </div>
   <div class="footer__bottom footer-bottom">
@@ -38,6 +38,10 @@ const yearNow = new Date().getFullYear();
     }
   }
 
+}
+.logo{
+  font-weight: 700;
+  font-size: clamp(1.5rem, 0.714vw + 1.357rem, 2rem);
 }
 
 </style>

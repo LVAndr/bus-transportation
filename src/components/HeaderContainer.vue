@@ -5,7 +5,7 @@
 <template>
 <header class="header">
   <div class="header__container container">
-    <a href="/" class="logo">Bus tickets</a>
+    <a href="/" class="logo">Bus trans</a>
     <div class="header__content header-content">
       <a href="" class="header-content__link link">
         <span class="header-content__icon">
