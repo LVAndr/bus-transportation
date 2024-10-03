@@ -11,11 +11,11 @@ import TripCard from "./TripCard.vue";
     </h2>
     <div class="trips__cards">
       <trip-card/>
-      <trip-card/>
-      <trip-card/>
-      <trip-card/>
-      <trip-card/>
-      <trip-card/>
+      <trip-card :color="'green'"/>
+      <trip-card :color="'rose'"/>
+      <trip-card :color="'dark'"/>
+      <trip-card :color="'blue'"/>
+      <trip-card :color="'orange'"/>
     </div>
   </div>
 </section>
