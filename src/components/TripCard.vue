@@ -4,6 +4,11 @@ const props = defineProps({
     type: String,
     required: false,
     default: 'violet'
+  },
+  region: {
+    type: String,
+    required: false,
+    default: 'Східні регіони'
   }
 })
 </script>
@@ -14,8 +19,44 @@ const props = defineProps({
     :class="color"
 >
   <div class="trip-card__top trip-top">
-    <div class="trip-top__img"></div>
-    <h3 class="trip-top__title">Східні регіони</h3>
+    <div class="trip-top__img">
+      <img src="../assets/img/vest-region.webp" alt="">
+    </div>
+    <h3 class="trip-top__title">{{region}}</h3>
+  </div>
+  <div class="trip-card__bottom trip-bottom">
+    <ul class="trip-bottom__list list-reset">
+      <li class="trip-bottom__item">
+        <span class="trip-bottom__item-departure">Київ</span>
+        -
+        <span class="trip-bottom__item-destination">Харків</span>
+      </li>
+      <li class="trip-bottom__item">
+        <span class="trip-bottom__item-departure">Київ</span>
+        -
+        <span class="trip-bottom__item-destination">Харків</span>
+      </li>
+      <li class="trip-bottom__item">
+        <span class="trip-bottom__item-departure">Київ</span>
+        -
+        <span class="trip-bottom__item-destination">Харків</span>
+      </li>
+      <li class="trip-bottom__item">
+        <span class="trip-bottom__item-departure">Київ</span>
+        -
+        <span class="trip-bottom__item-destination">Харків</span>
+      </li>
+      <li class="trip-bottom__item">
+        <span class="trip-bottom__item-departure">Київ</span>
+        -
+        <span class="trip-bottom__item-destination">Харків</span>
+      </li>
+      <li class="trip-bottom__item">
+        <span class="trip-bottom__item-departure">Київ</span>
+        -
+        <span class="trip-bottom__item-destination">Харків</span>
+      </li>
+    </ul>
   </div>
 </div>
 </template>
@@ -24,10 +65,33 @@ const props = defineProps({
 @import "src/assets/styles/variables";
 .trip-card{
   width: 100%;
-  min-height: 200px;
   color: $text-color-light;
   border-radius: 10px;
   padding: 20px 30px;
+
+  &__top{
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+  }
+  &__bottom{
+    margin-top: 15px;
+  }
+  .trip-top{
+    &__title{
+      margin-left: 25px;
+    }
+  }
+  .trip-bottom{
+    &__list{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px
+    }
+    &__item:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
 }
 .violet{
   background: linear-gradient(315deg, #764ba2, #667eea);

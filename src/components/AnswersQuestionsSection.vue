@@ -93,11 +93,10 @@ const faqObj = ref([
   }
   &__top>&__item-question{
     color: inherit;
-    transition: color .3s;
+    transition: color .3s ease;
   }
   &__top:hover>&__item-question{
     color: #009eff;
-    transition: color .3s;
   }
   &__medium{
     height: 0;
