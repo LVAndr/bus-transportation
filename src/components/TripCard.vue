@@ -27,34 +27,52 @@ const props = defineProps({
   <div class="trip-card__bottom trip-bottom">
     <ul class="trip-bottom__list list-reset">
       <li class="trip-bottom__item">
-        <span class="trip-bottom__item-departure">Київ</span>
-        -
-        <span class="trip-bottom__item-destination">Харків</span>
+        <div>
+          <span class="trip-bottom__item-departure">Київ</span>
+          -
+          <span class="trip-bottom__item-destination">Харків</span>
+        </div>
+        <hr class="trip-bottom__item-hr">
       </li>
       <li class="trip-bottom__item">
-        <span class="trip-bottom__item-departure">Київ</span>
-        -
-        <span class="trip-bottom__item-destination">Харків</span>
+        <div>
+          <span class="trip-bottom__item-departure">Київ</span>
+          -
+          <span class="trip-bottom__item-destination">Харків</span>
+        </div>
+        <hr class="trip-bottom__item-hr">
+      </li>
+
+      <li class="trip-bottom__item">
+        <div>
+          <span class="trip-bottom__item-departure">Київ</span>
+          -
+          <span class="trip-bottom__item-destination">Харків</span>
+        </div>
+        <hr class="trip-bottom__item-hr">
       </li>
       <li class="trip-bottom__item">
-        <span class="trip-bottom__item-departure">Київ</span>
-        -
-        <span class="trip-bottom__item-destination">Харків</span>
+        <div>
+          <span class="trip-bottom__item-departure">Київ</span>
+          -
+          <span class="trip-bottom__item-destination">Харків</span>
+        </div>
+        <hr class="trip-bottom__item-hr">
+      </li>
+
+      <li class="trip-bottom__item">
+        <div>
+          <span class="trip-bottom__item-departure">Київ</span>
+          -
+          <span class="trip-bottom__item-destination">Харків</span>
+        </div>
       </li>
       <li class="trip-bottom__item">
-        <span class="trip-bottom__item-departure">Київ</span>
-        -
-        <span class="trip-bottom__item-destination">Харків</span>
-      </li>
-      <li class="trip-bottom__item">
-        <span class="trip-bottom__item-departure">Київ</span>
-        -
-        <span class="trip-bottom__item-destination">Харків</span>
-      </li>
-      <li class="trip-bottom__item">
-        <span class="trip-bottom__item-departure">Київ</span>
-        -
-        <span class="trip-bottom__item-destination">Харків</span>
+        <div>
+          <span class="trip-bottom__item-departure">Київ</span>
+          -
+          <span class="trip-bottom__item-destination">Харків</span>
+        </div>
       </li>
     </ul>
   </div>
@@ -86,10 +104,25 @@ const props = defineProps({
     &__list{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      column-gap: 10px
     }
     &__item:not(:last-child){
       margin-bottom: 10px;
+    }
+    &__item{
+      padding: 5px 0;
+      position: relative;
+      cursor: pointer;
+    }
+    &__item-hr{
+      margin: 5px 0;
+      border: none;
+      height: 1px;
+      background-color: #ffffff;
+      position: absolute;
+      top: 22px;
+      right: 0;
+      left: 0;
+      z-index: 2;
     }
   }
 }
