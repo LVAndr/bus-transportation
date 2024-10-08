@@ -40,6 +40,7 @@ const requireImage = (imageName) => {
 <style scoped lang="scss">
 @import "src/assets/styles/variables";
 .information-card{
+  margin: 20px auto;
   letter-spacing: 0.03em;
   color: $card-color;
   display: flex;
