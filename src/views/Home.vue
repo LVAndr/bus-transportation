@@ -4,12 +4,14 @@ import HeaderContainer from "../components/HeaderContainer.vue";
 import FooterContainer from "../components/FooterContainer.vue";
 import TripCardsSection from "../components/TripsCardsSection.vue";
 import AnswersQuestionsSection from "../components/AnswersQuestionsSection.vue";
+import AdvantagesSection from "../components/AdvantagesSection.vue";
 </script>
 
 <template>
     <header-container/>
     <main class="main">
       <hero-section/>
+      <advantages-section/>
       <trip-cards-section/>
       <answers-questions-section/>
     </main>

@@ -3,6 +3,8 @@ $background-linear-gradient: linear-gradient(225deg, #0198f4, #0149b5);
 $background-footer-top: #2e2e2e;
 $background-footer-bottom: #242424;
 
+$border-color: #e3e9ee;
+
 
 $title-font-size: clamp(1.25rem, 1.786vw + 0.893rem, 2.5rem);
 $title-bottom-font-size: clamp(0.875rem, 0.536vw + 0.768rem, 1.25rem);
@@ -10,6 +12,9 @@ $question-font-size: clamp(1rem, 0.536vw + 0.893rem, 1.375rem);
 $answer-font-size: clamp(1rem, 0.179vw + 0.964rem, 1.125rem);
 $text-color-light: #fff;
 $text-color-dark: #2c2c2c;
+$card-color: #2c2c2c;
+$card-background: #0080e7;
+$card-box-shadow: 0 6px 25px 0 rgba(0, 128, 231, .62);
 $text-size: clamp(0.875rem, 0.357vw + 0.804rem, 1.125rem);
 $link-size: 16px;
 
