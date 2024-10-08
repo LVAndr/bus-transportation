@@ -28,6 +28,7 @@ const informationLinks = ref([
 
 <template>
 <section class="information-links">
+
   <div class="information-links__container container">
   <nav class="information-links__content">
     <a v-for="item in informationLinks" :href="item.link">
