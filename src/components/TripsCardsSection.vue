@@ -38,8 +38,7 @@ import TripCard from "./TripCard.vue";
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 30px;
-    column-gap: 30px;
+    gap: 30px;
     margin-top: 40px;
   }
 }

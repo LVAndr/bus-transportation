@@ -30,6 +30,7 @@
     margin-top: 50px;
   }
   &__title{
+    text-align: center;
     display: flex;
     flex-direction: column;
     &-bottom{

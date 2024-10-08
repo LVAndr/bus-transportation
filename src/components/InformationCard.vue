@@ -17,9 +17,6 @@ const props = defineProps({
     required: false,
   }
 })
-const requireImage = (imageName) => {
-  return new URL(`../assets/img/advantages-cards-imgs/${imageName}`, import.meta.url).href;
-}
 </script>
 
 <template>
@@ -27,8 +24,8 @@ const requireImage = (imageName) => {
     class="information-card"
     :class="cardBackground"
 >
-  <div class="information-card__image">
-    <img width="50" height="auto" loading="lazy" :src="requireImage(cardImg)" alt="IMG">
+  <div class="information-card__image" v-show="cardImg !== null || cardImg !== ''">
+    <img width="50" height="auto" loading="lazy" :src="cardImg" alt="IMG">
   </div>
   <div class="information-card__info">
     <h3 class="information-card__title">{{cardTitle}}</h3>
@@ -40,7 +37,7 @@ const requireImage = (imageName) => {
 <style scoped lang="scss">
 @import "src/assets/styles/variables";
 .information-card{
-  margin: 20px auto;
+  height: 100%;
   letter-spacing: 0.03em;
   color: $card-color;
   display: flex;
@@ -59,6 +56,7 @@ const requireImage = (imageName) => {
     margin-bottom: 2px;
   }
   &__text{
+
   }
 }
 @media (max-width: 991.98px) {

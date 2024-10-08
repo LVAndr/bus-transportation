@@ -1,24 +1,26 @@
 <script setup>
 import {ref} from "vue";
 import InformationCard from "./InformationCard.vue";
+import {requireImage} from "../utils/index.js";
 
+const folderPath = '../assets/img/information-links-cards-imgs/'
 const informationLinks = ref([
   {
-    title: 'Розклад',
+    title: 'Розклад Розклад Розклад Розклад',
     text: 'Усі заплановані рейси за маршрутом на вибрану дату.',
-    imgName: '',
+    imgName: 'calendar-icon.svg',
     link: '/'
   },
   {
     title: 'Автостанції',
-    text: 'Інформація про автостанції України та Європи: адреси, номери телефонів, сайт та послуги',
-    imgName: '',
+    text: 'Інформація про автостанції України та Європи: адреси, номери телефонів, сайт та послуги.',
+    imgName: 'location-icon.svg',
     link: '/'
   },
   {
     title: 'Табло автостанцій',
     text: 'Можете стежити за статусом рейсу: часом відправлення, прибуття та затримки.',
-    imgName: '',
+    imgName: 'list-icon.svg',
     link: '/'
   }
 ])
@@ -33,7 +35,7 @@ const informationLinks = ref([
           :card-background="'card-background'"
           :card-text="item.text"
           :card-title="item.title"
-          :card-img="item.imgName"
+          :card-img="requireImage(folderPath, item.imgName)"
       />
     </a>
   </nav>
@@ -44,12 +46,12 @@ const informationLinks = ref([
 <style scoped lang="scss">
 .information-links{
   padding-top: 40px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   &__content{
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 30px;
+    gap: 30px;
   }
 }
 </style>
