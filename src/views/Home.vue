@@ -5,6 +5,7 @@ import FooterContainer from "../components/FooterContainer.vue";
 import TripCardsSection from "../components/TripsCardsSection.vue";
 import AnswersQuestionsSection from "../components/AnswersQuestionsSection.vue";
 import AdvantagesSection from "../components/AdvantagesSection.vue";
+import InformationLinksSection from "../components/InformationLinksSection.vue";
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import AdvantagesSection from "../components/AdvantagesSection.vue";
       <advantages-section/>
       <trip-cards-section/>
       <answers-questions-section/>
+      <information-links-section/>
     </main>
     <footer-container/>
 </template>

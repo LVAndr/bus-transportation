@@ -18,7 +18,7 @@ const props = defineProps({
   }
 })
 const requireImage = (imageName) => {
-  return new URL(`../assets/img/information-cards-imgs/${imageName}`, import.meta.url).href;
+  return new URL(`../assets/img/advantages-cards-imgs/${imageName}`, import.meta.url).href;
 }
 </script>
 
@@ -57,6 +57,8 @@ const requireImage = (imageName) => {
   }
   &__title{
     margin-bottom: 2px;
+  }
+  &__text{
   }
 }
 @media (max-width: 991.98px) {
