@@ -6,6 +6,7 @@ import TripCardsSection from "../components/TripsCardsSection.vue";
 import AnswersQuestionsSection from "../components/AnswersQuestionsSection.vue";
 import AdvantagesSection from "../components/AdvantagesSection.vue";
 import InformationLinksSection from "../components/InformationLinksSection.vue";
+import DescriptionSection from "../components/DescriptionSection.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import InformationLinksSection from "../components/InformationLinksSection.vue";
     <main class="main">
       <hero-section/>
       <advantages-section/>
+      <description-section/>
       <trip-cards-section/>
       <answers-questions-section/>
       <information-links-section/>

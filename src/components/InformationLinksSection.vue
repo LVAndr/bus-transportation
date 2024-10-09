@@ -6,7 +6,7 @@ import {requireImage} from "../utils/index.js";
 const folderPath = '../assets/img/information-links-cards-imgs/'
 const informationLinks = ref([
   {
-    title: 'Розклад Розклад Розклад Розклад',
+    title: 'Розклад',
     text: 'Усі заплановані рейси за маршрутом на вибрану дату.',
     imgName: 'calendar-icon.svg',
     link: '/'
