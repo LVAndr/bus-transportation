@@ -52,6 +52,10 @@ const props = defineProps({
     background-color: $card-background;
     box-shadow: $card-box-shadow;
   }
+  &__image{
+    max-width: 60px;
+    width: 100%;
+  }
   &__title{
     margin-bottom: 2px;
   }
