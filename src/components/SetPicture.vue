@@ -15,7 +15,7 @@ const props = defineProps({
 
 <template>
   <picture>
-    <template v-for="(item, idx) in imgObj.sourceImgs" :key="idx">
+    <template v-if="imgObj.sourceImgs" v-for="(item, idx) in imgObj.sourceImgs" :key="idx">
       <source
           :srcset="requireImage(folderPath, item.nameImg)"
           :media="`(${item.mediaValue})`"
