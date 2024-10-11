@@ -46,10 +46,10 @@ const informationLinks = ref([
 
 <style scoped lang="scss">
 .information-links{
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   &__content{
-    margin-top: 30px;
+    margin: 30px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;

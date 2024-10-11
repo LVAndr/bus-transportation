@@ -139,4 +139,18 @@ const faqObj = ref([
     }
   }
 }
+@media (hover: none) {
+  .answers-questions{
+    &__top:hover>&__item-question{
+      color: inherit;
+    }
+  }
+}
+@media (max-width: 479.98px) {
+  .answers-questions{
+    &__top:active>&__item-question{
+      color: #009eff;
+    }
+  }
+}
 </style>

@@ -33,7 +33,8 @@ const advantagesList = ref([
           v-for="item in advantagesList"
           :card-text="item.text"
           :card-title="item.title"
-          :card-img="requireImage(folderPath, item.imgName)"/>
+          :card-img="requireImage(folderPath, item.imgName)"
+      />
     </div>
   </div>
 </section>
@@ -43,6 +44,7 @@ const advantagesList = ref([
 .advantages{
   padding-top: 40px;
   padding-bottom: 20px;
+  margin: 15px auto;
   &__container{
 
   }
