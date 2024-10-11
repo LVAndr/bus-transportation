@@ -1,6 +1,6 @@
 <script setup>
 import {ref} from "vue";
-import {requireImage} from "../utils/index.js";
+import SetPicture from "./SetPicture.vue";
 const folderPath = '../assets/img/'
 const descriptionPicture = ref({
   defaultImg: {
@@ -31,19 +31,7 @@ const descriptionPicture = ref({
   <div class="description__container container">
     <div class="description__hero-img">
       <div class="img1 img">
-        <picture>
-          <template v-for="(item, idx) in descriptionPicture.sourceImgs" :key="idx">
-            <source
-                :srcset="requireImage(folderPath, item.nameImg)"
-                :media="`(${item.mediaValue})`"
-            >
-          </template>
-          <img :width="descriptionPicture.defaultImg.width"
-               :height="descriptionPicture.defaultImg.height"
-               loading="lazy"
-               :src="requireImage(folderPath, descriptionPicture.defaultImg.nameImg)"
-               :alt="descriptionPicture.defaultImg.alt">
-        </picture>
+        <set-picture :folder-path="folderPath" :img-obj="descriptionPicture"/>
 
       </div>
     </div>
