@@ -8,6 +8,9 @@
 *::after {
   box-sizing: border-box;
 }
+html{
+
+}
 html, body{
   height: 100%;
 }
@@ -20,11 +23,13 @@ body{
 }
 #app{
   height: 100%;
+
 }
 .container{
   margin: 0 auto;
   padding: 0 $container-offset-large;
   max-width: calc($container-width + ($container-offset-large * 2));
+  overflow: hidden
 }
 @media (max-width: 767.98px) {
   .container{

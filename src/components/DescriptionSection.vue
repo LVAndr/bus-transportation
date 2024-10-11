@@ -7,7 +7,13 @@
   <div class="description__container container">
     <div class="description__hero-img">
       <div class="img1 img">
-        <img width="600" height="auto"  src="../assets/img/bus-transportation.jpg" alt="bus transportation image">
+        <picture>
+          <source srcset="../assets/img/bus-transportation-small.jpg" media="(min-width: 768px)">
+          <source srcset="../assets/img/bus-transportation.jpg" media="(min-width: 480px)">
+          <source srcset="../assets/img/bus-transportation-small.jpg" media="(max-width: 479px)">
+          <img width="600" height="auto"  src="../assets/img/bus-transportation.jpg" alt="bus transportation image">
+        </picture>
+
       </div>
     </div>
     <div class="description__text-content">
@@ -35,13 +41,10 @@
     overflow: hidden;
   }
   &__hero-img{
-    display: flex;
-    justify-content: center;
-    flex: 0 1 50%;
     padding: 15px;
-    max-width: 600px;
+    max-width: 400px;
     width: 100%;
-    height: 100%;
+    height: auto;
   }
   &__hero-img>.img{
     img{
@@ -52,9 +55,7 @@
     }
   }
   &__text-content{
-    max-width: 700px;
     width: 100%;
-    display: block;
   }
   &__title{
     margin-bottom: 40px;
@@ -77,13 +78,15 @@
   .description{
     &__container{
       flex-direction: column;
+      justify-content: center;
       gap: 40px;
     }
     &__hero-img{
+      max-width: 600px;
       order: 1;
-      max-width: 350px;
     }
     &__title{
+      text-align: center;
       margin-bottom: 20px;
     }
   }
