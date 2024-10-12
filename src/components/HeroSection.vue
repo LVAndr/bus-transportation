@@ -1,5 +1,12 @@
 <script setup>
 
+import InformerCard from "./InformerCard.vue";
+import {ref} from "vue";
+
+const informerContent = ref({
+  title: 'Робота сервісу в період війни',
+  description: 'Інформація стосовно роботи Bus Trans в період війни'
+})
 </script>
 
 <template>
@@ -11,6 +18,7 @@
           <span class="hero__title-bottom" >маршрути по Україні та Європі в одному місці</span>
         </h1>
       </div>
+      <informer-card :informer-title="informerContent.title" :informer-description="informerContent.description"/>
     </div>
   </section>
 </template>
@@ -28,6 +36,7 @@
   }
   &__content{
     margin-top: 50px;
+    margin-bottom: 50px;
   }
   &__title{
     text-align: center;

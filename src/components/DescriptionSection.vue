@@ -68,9 +68,6 @@ const descriptionPicture = ref({
   &__hero-img>.img{
     img{
       width: 100%;
-      display: inline-block;
-      border-radius: 18px;
-      box-shadow: $image-box-shadow;
     }
   }
   &__text-content{

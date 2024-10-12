@@ -35,6 +35,6 @@ img{
   width: 100%;
   display: inline-block;
   border-radius: 12px;
-  box-shadow: $image-box-shadow;
+  box-shadow: $light-box-shadow;
 }
 </style>
