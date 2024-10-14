@@ -8,6 +8,7 @@ const informerContent = ref({
   title: 'Робота сервісу в період війни',
   description: 'Інформація стосовно роботи Bus Trans в період війни'
 })
+const showModal = ref(false);
 </script>
 
 <template>
@@ -19,8 +20,17 @@ const informerContent = ref({
           <span class="hero__title-bottom" >маршрути по Україні та Європі в одному місці</span>
         </h1>
       </div>
-      <informer-card :informer-title="informerContent.title" :informer-description="informerContent.description"/>
-      <modal-window :modal-id="'header-modal-informer'"/>
+      <informer-card
+          @click="showModal = true"
+          :informer-title="informerContent.title"
+          :informer-description="informerContent.description"
+      />
+      <modal-window
+          v-if="showModal"
+          :class="showModal ? 'open' : ''"
+          @close="showModal = false"
+          :modal-id="'header-modal-informer'"
+      />
     </div>
   </section>
 </template>
