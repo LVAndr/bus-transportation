@@ -2,6 +2,7 @@
 
 import InformerCard from "./InformerCard.vue";
 import {ref} from "vue";
+import ModalWindow from "./ModalWindow.vue";
 
 const informerContent = ref({
   title: 'Робота сервісу в період війни',
@@ -19,6 +20,7 @@ const informerContent = ref({
         </h1>
       </div>
       <informer-card :informer-title="informerContent.title" :informer-description="informerContent.description"/>
+      <modal-window :modal-id="'header-modal-informer'"/>
     </div>
   </section>
 </template>
