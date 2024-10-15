@@ -7,6 +7,10 @@ import ModalWindow from "./ModalWindow.vue";
 const informerContent = ref({
   title: 'Робота сервісу в період війни',
   description: 'Інформація стосовно роботи Bus Trans в період війни'
+});
+const modalObj = ref({
+  title: 'Робота сервісу в період війни',
+  description: 'На даний час, незважаючи на військові дії, сервіс Bus Trans продовжує надавати можливість купувати квитки на тисячі маршрутів, як по Україні, так і в Європі. Ми намагаємося підтримувати наших клієнтів та партнерів у цей складний період, адаптуючи наші послуги до змінюваних обставин. Купівля квитків доступна на сайті Bus Trans та в мобільному додатку Bus Trans, що дозволяє вам з легкістю організувати свою подорож, не виходячи з дому. Ми співпрацюємо з численними перевізниками, щоб забезпечити вам найбільший вибір маршрутів та гарантувати безпечність вашої подорожі.'
 })
 const showModal = ref(false);
 </script>
@@ -17,7 +21,7 @@ const showModal = ref(false);
       <div class="hero__content">
         <h1 class="hero__title title">
           <span class="hero__title-top">Квитки на автобус</span>
-          <span class="hero__title-bottom" >маршрути по Україні та Європі в одному місці</span>
+          <span class="hero__title-bottom">маршрути по Україні та Європі в одному місці</span>
         </h1>
       </div>
       <informer-card
@@ -26,11 +30,11 @@ const showModal = ref(false);
           :informer-description="informerContent.description"
       />
       <modal-window
-          v-if="showModal"
-          :class="showModal ? 'open' : ''"
+          :is-visible="showModal"
           @close="showModal = false"
           :modal-id="'header-modal-informer'"
-          :modal-text="'На даний час, незважаючи на військові дії, сервіс Bus Trans продовжує надавати можливість купувати квитки на тисячі маршрутів, як по Україні, так і в Європі. Ми намагаємося підтримувати наших клієнтів та партнерів у цей складний період, адаптуючи наші послуги до змінюваних обставин. Купівля квитків доступна на сайті Bus Trans та в мобільному додатку Bus Trans, що дозволяє вам з легкістю організувати свою подорож, не виходячи з дому. Ми співпрацюємо з численними перевізниками, щоб забезпечити вам найбільший вибір маршрутів та гарантувати безпечність вашої подорожі.'"
+          :modal-title="modalObj.title"
+          :modal-text="modalObj.description"
       />
     </div>
   </section>
@@ -38,24 +42,29 @@ const showModal = ref(false);
 
 <style scoped lang="scss">
 @import "src/assets/styles/variables";
-.hero{
+
+.hero {
   color: $text-color-light;
   min-height: 300px;
   background: $background-linear-gradient;
-  &__container{
+
+  &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  &__content{
+
+  &__content {
     margin-top: 50px;
     margin-bottom: 50px;
   }
-  &__title{
+
+  &__title {
     text-align: center;
     display: flex;
     flex-direction: column;
-    &-bottom{
+
+    &-bottom {
       font-size: $title-bottom-font-size;
     }
   }

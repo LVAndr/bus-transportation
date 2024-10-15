@@ -1,18 +1,22 @@
 <script setup>
 
 const props = defineProps({
+  isVisible: {
+    type: Boolean,
+    required: true
+  },
   modalId: {
     type: String,
     required: true
   },
   modalTitle: {
     type: String,
-    required: false,
-    default: 'Modal Title',
+    required: false
   },
   modalText: {
     type: String,
-    required: false}
+    required: false
+  }
 })
 const emits = defineEmits(['close']);
 
@@ -23,6 +27,8 @@ function closeModal() {
 
 <template>
 <div
+    v-if="isVisible"
+    :class="isVisible ? 'open' : ''"
     class="modal"
     @click.self="closeModal"
 >
@@ -60,7 +66,7 @@ function closeModal() {
   overflow-y: auto;
   visibility: hidden;
   opacity: 0;
-  transition: visibility .8s, opacity .8s;
+  transition: visibility .8s ease, opacity .8s ease;
   &__box {
     position: relative;
     margin: 35px 20px;
@@ -98,9 +104,10 @@ function closeModal() {
     font-weight: 400;
     margin-bottom: 16px;
   }
+  &.open{
+    visibility: visible;
+    opacity: 1;
+  }
 }
-.modal.open{
-  visibility: visible;
-  opacity: 1;
-}
+
 </style>
