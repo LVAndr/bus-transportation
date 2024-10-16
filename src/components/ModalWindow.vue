@@ -32,7 +32,10 @@ function closeModal() {
     class="modal"
     @click.self="closeModal"
 >
-  <div class="modal__box">
+  <div
+      class="modal__box"
+      :class="{'contact-modal': $slots.contactForm}"
+  >
     <button class="btn-reset modal__btn" @click="closeModal">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
            x="0px" y="0px" viewBox="0 0 512.021 512.021"
@@ -44,8 +47,22 @@ function closeModal() {
 </svg>
 
     </button>
-    <h2 v-if="modalTitle" class="modal__title title">{{modalTitle}}</h2>
-    <p v-if="modalText" class="modal__text">{{modalText}}</p>
+    <h2
+        v-if="modalTitle"
+        class="modal__title title"
+        :class="{'contact-modal__title': $slots.contactForm}"
+    >
+      {{modalTitle}}
+    </h2>
+    <p
+        v-if="modalText"
+        class="modal__text"
+        :class="{'contact-modal__description': $slots.contactForm}"
+    >
+      {{modalText}}
+    </p>
+
+    <slot name="contactForm"></slot>
   </div>
 </div>
 </template>
@@ -109,5 +126,14 @@ function closeModal() {
     opacity: 1;
   }
 }
-
+.contact-modal{
+  max-width: 390px;
+  &__title{
+    font-size: 26px;
+  }
+  &__description{
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+}
 </style>
