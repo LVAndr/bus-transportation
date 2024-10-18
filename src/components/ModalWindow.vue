@@ -22,6 +22,7 @@ const emits = defineEmits(['close']);
 
 function closeModal() {
   emits('close');
+  document.body.classList.remove('no-scroll');
 }
 </script>
 
