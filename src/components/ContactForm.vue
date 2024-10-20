@@ -1,5 +1,6 @@
 <script setup>
 import SetImage from "./SetImage.vue";
+import SetButton from "./setButton.vue";
 
 const props = defineProps({
   contactList: {
@@ -53,10 +54,10 @@ const props = defineProps({
 
       <div class="form-control">
         <label for="user-comment">Коментар</label>
-        <textarea name="user-comment" type="text" rows="3"></textarea>
+        <textarea name="user-comment" type="text" rows="4"></textarea>
       </div>
 
-      <button class="btn-reset form__btn">Відправити</button>
+      <set-button class="form__btn" title="Відправити"/>
     </form>
   </div>
 </div>
@@ -132,13 +133,6 @@ const props = defineProps({
 
       input[type="number"] {
         -moz-appearance: textfield;
-      }
-      button{
-        font-weight: 500;
-        border-radius: $card-border-radius;
-        background-color: $orange-color;
-        padding: 14px 15px;
-        color: $text-color-light;
       }
       .form__btn{
         width: 100%;
