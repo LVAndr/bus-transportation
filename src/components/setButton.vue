@@ -2,7 +2,6 @@
 const props = defineProps({
   label: {
     type: String,
-    required: false,
     default: 'Button',
   },
   color: {
@@ -11,10 +10,10 @@ const props = defineProps({
   },
   size: {
     type: String,
-    required: 'normal',
+    default: 'normal',
   },
   icon: {
-    type: String,
+    type: Boolean,
     default: false
   },
   width:{
