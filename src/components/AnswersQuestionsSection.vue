@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from "vue";
+import SetButton from "./setButton.vue";
 
 const faqObj = ref([
   {
@@ -64,6 +65,9 @@ const faqObj = ref([
           </div>
         </li>
       </ul>
+      <div class="answers-questions__link">
+        <set-button tag="a" class="answers-questions__btn" label="Дивитись всі" width="middle"/>
+      </div>
     </div>
   </div>
 </section>
@@ -137,6 +141,9 @@ const faqObj = ref([
     .answers-questions__medium{
       height: 100%;
     }
+  }
+  &__link{
+    margin-top: 35px;
   }
 }
 @media (hover: none) {

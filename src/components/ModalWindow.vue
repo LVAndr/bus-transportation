@@ -1,5 +1,7 @@
 <script setup>
 
+import SetButton from "./setButton.vue";
+
 const props = defineProps({
   isVisible: {
     type: Boolean,
@@ -37,17 +39,7 @@ function closeModal() {
       class="modal__box"
       :class="{'contact-modal': $slots.contactForm}"
   >
-    <button class="btn-reset modal__btn" @click="closeModal">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
-           x="0px" y="0px" viewBox="0 0 512.021 512.021"
-           xml:space="preserve" width="512" height="512">
-<g>
-	<path
-      fill="#fff" d="M301.258,256.01L502.645,54.645c12.501-12.501,12.501-32.769,0-45.269c-12.501-12.501-32.769-12.501-45.269,0l0,0   L256.01,210.762L54.645,9.376c-12.501-12.501-32.769-12.501-45.269,0s-12.501,32.769,0,45.269L210.762,256.01L9.376,457.376   c-12.501,12.501-12.501,32.769,0,45.269s32.769,12.501,45.269,0L256.01,301.258l201.365,201.387   c12.501,12.501,32.769,12.501,45.269,0c12.501-12.501,12.501-32.769,0-45.269L301.258,256.01z"/>
-</g>
-</svg>
-
-    </button>
+    <set-button class="modal__btn" color="dark" icon="true" @btn-click="closeModal"/>
     <h2
         v-if="modalTitle"
         class="modal__title title"
@@ -100,22 +92,6 @@ function closeModal() {
     position: absolute;
     top: 12px;
     right: 12px;
-    padding: 0;
-    border-radius: 50%;
-    background-color: #2c2c2c;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    transition: opacity .3s;
-    svg{
-      width: 8px;
-      height: 8px;
-    }
-  }
-  &__btn:hover{
-    opacity: .85;
   }
   &__title{
     font-size: $modal-title-font-size;

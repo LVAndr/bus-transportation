@@ -57,7 +57,7 @@ const props = defineProps({
         <textarea name="user-comment" type="text" rows="4"></textarea>
       </div>
 
-      <set-button class="form__btn" title="Відправити"/>
+      <set-button class="form__btn" size="small" color="primary" label="Відправити"/>
     </form>
   </div>
 </div>
@@ -136,7 +136,7 @@ const props = defineProps({
       }
       .form__btn{
         width: 100%;
-        margin: 12px auto 8px;
+        margin: 12px auto 0;
       }
     }
   }
