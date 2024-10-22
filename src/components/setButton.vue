@@ -1,4 +1,6 @@
 <script setup>
+import closeIcon from '../assets/img/close-icon.svg'
+import SetImage from "./SetImage.vue";
 const props = defineProps({
   label: {
     type: String,
@@ -16,19 +18,43 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
+  image: {
+    type: [String, Function],
+    default: closeIcon
+  },
+  folderPath: {
+    type: String,
+    required: false
+  },
   width:{
     type: String,
     default: 'full'
-  }
+  },
+  tag: {
+    type: String,
+    default: 'button',
+  },
+  url:{
+    type: String,
+    default: '#'
+  },
+  disabled: {
+    type: Boolean,
+    required: false,
+  },
 })
 const emits = defineEmits(['btn-click']);
 const clickOnButton = ()=>{
+  if (props.tag === 'button') {
     emits("btn-click")
+  }
 }
 </script>
 
 <template>
-<button
+<component
+    :is="tag"
+    :href="tag === 'a' ? url : null"
     @click="clickOnButton"
     :class="['btn-reset', 'btn', `btn__${color}`,
     {'btn__icon': icon}, {'btn__small': size === 'small'},
@@ -36,21 +62,29 @@ const clickOnButton = ()=>{
     ]"
 >
   <template v-if="icon">
-    <img src="../assets/img/close-icon.svg" alt="button icon">
+    <set-image :folder-path="folderPath" :img-name="image" :img-height="8" :img-width="8" img-alt="button icon"/>
   </template>
   <template v-else>{{label}}</template>
-</button>
+</component>
 </template>
 
 <style scoped lang="scss">
 @import "src/assets/styles/variables";
-.btn {
+a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button{
   display: block;
+}
+.btn {
   text-align: center;
   margin: 10px auto;
   min-width: 200px;
   height: 64px;
   font-weight: 600;
+  line-height: 1;
   border-radius: $card-border-radius;
   color: $text-color-light;
   padding: 14px 15px;

@@ -66,7 +66,7 @@ const faqObj = ref([
         </li>
       </ul>
       <div class="answers-questions__link">
-        <set-button class="answers-questions__btn" label="Дивитися всі" width="middle"/>
+        <set-button tag="a" link class="answers-questions__btn" label="Дивитися всі" width="middle"/>
       </div>
     </div>
   </div>

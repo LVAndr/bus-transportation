@@ -1,5 +1,4 @@
 <script setup>
-
 import SetButton from "./setButton.vue";
 
 const props = defineProps({
@@ -39,7 +38,7 @@ function closeModal() {
       class="modal__box"
       :class="{'contact-modal': $slots.contactForm}"
   >
-    <set-button class="modal__btn" color="dark" icon="true" @btn-click="closeModal"/>
+    <set-button class="modal__btn" color="dark" :icon=true @btn-click="closeModal"/>
     <h2
         v-if="modalTitle"
         class="modal__title title"

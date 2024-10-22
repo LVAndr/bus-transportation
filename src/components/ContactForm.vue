@@ -137,6 +137,7 @@ const props = defineProps({
       .form__btn{
         width: 100%;
         margin: 12px auto 0;
+        height: 50px;
       }
     }
   }
