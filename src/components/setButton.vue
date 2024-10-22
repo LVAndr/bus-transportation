@@ -1,6 +1,7 @@
 <script setup>
 import closeIcon from '../assets/img/close-icon.svg'
 import SetImage from "./SetImage.vue";
+
 const props = defineProps({
   label: {
     type: String,
@@ -15,6 +16,10 @@ const props = defineProps({
     default: 'normal',
   },
   icon: {
+    type: Boolean,
+    default: false
+  },
+  iconLabel:{
     type: Boolean,
     default: false
   },
@@ -57,12 +62,19 @@ const clickOnButton = ()=>{
     :href="tag === 'a' ? url : null"
     @click="clickOnButton"
     :class="['btn-reset', 'btn', `btn__${color}`,
-    {'btn__icon': icon}, {'btn__small': size === 'small'},
+    {'btn__icon': icon}, {'btn__icon-text': iconLabel}, {'btn__small': size === 'small'},
     `btn__${width === 'middle' ? 'middle' : 'full'}`
     ]"
+    :disabled="disabled"
 >
   <template v-if="icon">
     <set-image :folder-path="folderPath" :img-name="image" :img-height="8" :img-width="8" img-alt="button icon"/>
+  </template>
+  <template v-else-if="iconLabel">
+    <span class="icon">
+      <set-image :folder-path="folderPath" :img-name="image" img-height="auto" :img-width="14" img-alt="button icon"/>
+    </span>
+    <span class="label">{{label}}</span>
   </template>
   <template v-else>{{label}}</template>
 </component>
@@ -89,6 +101,14 @@ button{
   color: $text-color-light;
   padding: 14px 15px;
   box-shadow: $light-box-shadow;
+  &:disabled{
+    opacity: .6;
+    cursor: default;
+    animation: none;
+    &:hover{
+      opacity: .6;
+    }
+  }
   &__full{
     width: 100%;
   }
@@ -106,6 +126,10 @@ button{
     &:active {
       background-image: linear-gradient(85deg, #f47c02 9%, #ed8d04 50%, #f47c02);
     }
+  }
+  &__transparent{
+    background-color: transparent;
+    background-image: none;
   }
   &__small{
     height: 46px;
@@ -132,6 +156,31 @@ button{
     }
     &:hover{
       opacity: .85;
+    }
+  }
+  &__icon-text{
+    font-size: 16px;
+    font-weight: 400;
+    min-width: auto;
+    height: auto;
+    width: auto;
+    display: flex;
+    background-image: none;
+    background-color: transparent;
+    color: $text-color-light;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    box-shadow: none;
+    & .icon{
+      margin-right: 6px;
+      width: 14px;
+      height: auto;
+    }
+    @media (max-width: 767.98px) {
+      & .label{
+        display: none;
+      }
     }
   }
 
@@ -170,10 +219,5 @@ button{
       background-image: linear-gradient(85deg, #ff8100 9%, #f69102 100%, #ff8100 100%);
     }
   }
-}
-@media (max-width: 767.98px) {
- .btn{
-   height: 60px;
- }
 }
 </style>

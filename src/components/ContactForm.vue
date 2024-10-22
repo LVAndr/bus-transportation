@@ -57,7 +57,7 @@ const props = defineProps({
         <textarea name="user-comment" type="text" rows="4"></textarea>
       </div>
 
-      <set-button class="form__btn" size="small" color="primary" label="Відправити"/>
+      <set-button :disabled="true" class="form__btn" size="small" color="primary" label="Відправити"/>
     </form>
   </div>
 </div>
