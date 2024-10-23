@@ -27,25 +27,26 @@ const informationLinks = ref([
 </script>
 
 <template>
-<section class="information-links">
+<section class="quick-links">
+  <div class="quick-links__container container">
+  <nav class="quick-links__content">
 
-  <div class="information-links__container container">
-  <nav class="information-links__content">
-    <a v-for="item in informationLinks" :href="item.link">
       <information-card
-          :card-background="'card-background'"
+          v-for="item in informationLinks"
+          :url="item.link"
+          tag="a"
+          color="blue"
           :card-text="item.text"
           :card-title="item.title"
           :card-img="requireImage(folderPath, item.imgName)"
       />
-    </a>
   </nav>
 </div>
 </section>
 </template>
 
 <style scoped lang="scss">
-.information-links{
+.quick-links{
   padding-top: 10px;
   padding-bottom: 10px;
   &__content{

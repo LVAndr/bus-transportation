@@ -5,7 +5,7 @@ import FooterContainer from "../components/FooterContainer.vue";
 import TripCardsSection from "../components/TripsCardsSection.vue";
 import AnswersQuestionsSection from "../components/AnswersQuestionsSection.vue";
 import AdvantagesSection from "../components/AdvantagesSection.vue";
-import InformationLinksSection from "../components/InformationLinksSection.vue";
+import QuickLinksSection from "../components/QuickLinksSection.vue";
 import DescriptionSection from "../components/DescriptionSection.vue";
 </script>
 
@@ -17,7 +17,7 @@ import DescriptionSection from "../components/DescriptionSection.vue";
       <description-section/>
       <trip-cards-section/>
       <answers-questions-section/>
-      <information-links-section/>
+      <quick-links-section/>
     </main>
     <footer-container/>
 </template>

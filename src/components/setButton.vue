@@ -104,8 +104,8 @@ button{
   &:disabled{
     opacity: .6;
     cursor: default;
-    animation: none;
     &:hover{
+      animation: none;
       opacity: .6;
     }
   }

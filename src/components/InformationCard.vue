@@ -15,14 +15,28 @@ const props = defineProps({
   cardBackground: {
     type: String,
     required: false,
+  },
+  color: {
+    type: String,
+    default: 'rounded'
+  },
+  tag:{
+    type: String,
+    default: 'div'
+  },
+  url:{
+    type: String,
+    default: '#'
   }
 })
 </script>
 
 <template>
-<div
+<component
+    :is="tag"
+    :href="tag === 'a' ? url : null"
     class="information-card"
-    :class="cardBackground"
+    :class="['information-card', `information-card__${color}`, cardBackground]"
 >
   <div class="information-card__image" v-show="cardImg !== null || cardImg !== ''">
     <img width="50" height="auto" loading="lazy" :src="cardImg" alt="IMG">
@@ -31,7 +45,7 @@ const props = defineProps({
     <h3 class="information-card__title">{{cardTitle}}</h3>
     <p class="information-card__text">{{cardText}}</p>
   </div>
-</div>
+</component>
 </template>
 
 <style scoped lang="scss">
@@ -45,8 +59,15 @@ const props = defineProps({
   gap: 20px;
   padding: 25px 27px 30px;
   border-radius: 12px;
-  border: 1px solid $border-color;
-  &.card-background{
+  &__rounded{
+    background-color: transparent;
+    border: 1px solid $border-color;
+  }
+  &__transparent{
+    background-color: transparent;
+    border-radius: 0;
+  }
+  &__blue{
     border: none;
     color: #fff;
     background-color: $card-background;
