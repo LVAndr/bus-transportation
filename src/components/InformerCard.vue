@@ -29,7 +29,7 @@ const props = defineProps({
   border-radius: $card-border-radius;
   border-left: 5px solid $orange-color;
   background-color: $background-color-light-opacity;
-  box-shadow: $card-box-shadow;
+  box-shadow: $more-light-box-shadow;
   cursor: pointer;
 }
 </style>

@@ -73,6 +73,7 @@ const showModal = ref(false);
 
 }
 .logo{
+  user-select: none;
   font-weight: 700;
   font-size: clamp(1.5rem, 0.714vw + 1.357rem, 2rem);
 }

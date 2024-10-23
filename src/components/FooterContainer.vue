@@ -1,4 +1,8 @@
 <script setup>
+import SetImage from "./SetImage.vue";
+
+const folderPath = '../assets/img/'
+
 const yearNow = new Date().getFullYear();
 </script>
 
@@ -11,8 +15,16 @@ const yearNow = new Date().getFullYear();
   </div>
   <div class="footer__bottom footer-bottom">
     <div class="footer-bottom__container container">
-      <small>Bus Tickets &copy {{yearNow}}</small>
-      <small>Сайт розроблено <a href="" lang="en">Vadim Liulko</a></small>
+      <small class="footer-bottom__copy">Bus Tickets &copy {{yearNow}}</small>
+      <div class="footer-bottom__payment">
+        <div class="footer-bottom__payment-img">
+          <set-image :folder-path="folderPath" img-name="visa-icon.svg" img-width="auto" img-height="auto" img-alt="visa payment icon"/>
+        </div>
+        <div class="footer-bottom__payment-img">
+          <set-image :folder-path="folderPath" img-name="masterCard-icon.svg" img-width="auto" img-height="auto" img-alt="master card payment icon"/>
+        </div>
+      </div>
+      <small class="footer-bottom__developer">Сайт розроблено <a href="" lang="en">Vadim Liulko</a></small>
     </div>
   </div>
 </footer>
@@ -36,6 +48,11 @@ const yearNow = new Date().getFullYear();
       justify-content: space-between;
       align-items: center;
     }
+  }
+  &-bottom__payment{
+    display: flex;
+    gap: 16px;
+    align-items: center;
   }
 
 }
